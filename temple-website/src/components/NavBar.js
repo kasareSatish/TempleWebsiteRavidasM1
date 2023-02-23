@@ -2,6 +2,8 @@ import { Component } from "react";
 import "./NavBarStyles.css";
 import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class NavBar extends Component {
   state = { clicked: false };
@@ -13,9 +15,8 @@ class NavBar extends Component {
       <nav className="NavbarItems">
         <h1 className="navbar-logo"> संत रविदास महाराज</h1>
         <div className="menu-icons" onClick={this.handleClick}>
-          <i
-            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
-          ></i>
+        <FontAwesomeIcon icon={faBars} className={this.state.clicked ? "fa-solid fa-bars" : "fa-bars"} />
+
         </div>
         <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
           {MenuItems.map((item, index) => {

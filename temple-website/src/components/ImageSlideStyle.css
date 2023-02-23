@@ -60,17 +60,18 @@
     width: 100vw;
   }
 }
-/* @media only screen and (max-width: 400px) {
+ @media only screen and (max-width: 400px) {
   .carousel {
     height: 70vh;
   }
   .carousel .slide {
     height: 45vh;
     /* width: 750%; */
-  
+  }
   .carousel .slide img {
     margin: 5vh auto;
     width: 80vw;
   }
+}
 
 
