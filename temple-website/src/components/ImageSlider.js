@@ -17,7 +17,7 @@ function ImageSlider() {
   return (
     <>
       <div>
-        <Carousel infiniteLoop autoPlay>
+        <Carousel infiniteLoop autoPlay showThumbs={false} >
           <div className="image">
             <img src={a} alt="" />
           </div>
