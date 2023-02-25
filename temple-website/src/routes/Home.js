@@ -12,6 +12,7 @@ function Home() {
         heroImg={mainImage}
         heading="संत रविदास महाराज मंदिर,माळवटा"
       />
+      <h2> फोटो गॅलरी </h2>
       <ImageSlider />
     </>
   );

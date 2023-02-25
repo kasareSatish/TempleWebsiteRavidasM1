@@ -9,52 +9,23 @@ import f from "../images/6.jpeg";
 import g from "../images/7.jpeg";
 import h from "../images/8.jpeg";
 import i from "../images/9.jpeg";
-import j from "../images/3.jpeg";
-import k from "../images/1.jpeg";
+import j from "../images/9.jpeg";
+
 
 import { Carousel } from "react-responsive-carousel";
+const images = [a, b, c, d, e, f, g, h, i,j];
+
 function ImageSlider() {
   return (
-    <>
-      <div>
-        <Carousel infiniteLoop autoPlay showThumbs={false} >
-          <div className="image">
-            <img src={a} alt="" />
-          </div>
-          <div className="image">
-            <img src={b} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={c} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={d} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={e} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={f} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={g} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={h} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={i} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={j} alt="mobile" />
-          </div>
-          <div className="image">
-            <img src={k} alt="mobile" />
-          </div>
-        </Carousel>
-      </div>
-    </>
+    <Carousel infiniteLoop autoPlay showThumbs={false}>
+      {images.map((image, index) => (
+        <div className="image" key={index}>
+          <img src={image} alt={`slide-${index}`} />
+        </div>
+      ))}
+    </Carousel>
   );
 }
+
 
 export default ImageSlider;
